@@ -15,6 +15,9 @@ import { gaEvent } from "@/lib/ga";
 function money12(plan: Plan, includeHidden: boolean) {
   return includeHidden ? calc12moTotal(plan) : plan.promoPrice * 12;
 }
+function fmtPrice(n: number) {
+  return n % 1 === 0 ? n.toFixed(0) : n.toFixed(2);
+}
 
 function getPlanRoles(list: Plan[], includeHidden: boolean) {
   if (list.length === 0) return {};
@@ -119,7 +122,11 @@ export default function CompareClient() {
             <h2 className="text-lg font-extrabold text-ckNavy">
               {carrier.name}
             </h2>
-
+            <p className="mt-1 text-sm text-slate-600">
+             {carrier.id === "att" && "업로드 속도가 빠른 광랜(Fiber) 중심 요금제"}
+             {carrier.id === "spectrum" && "미국 전역 가용성이 높은 케이블 인터넷"}
+              {carrier.id === "frontier" && "가성비 좋은 파이버 요금제"}
+            </p>
             <div className="mt-4 grid gap-4 md:grid-cols-3">
               {list.map((p) => {
                 const total12 = money12(p, includeHidden);
@@ -154,7 +161,7 @@ export default function CompareClient() {
                       <div className="rounded-xl bg-slate-50 p-3">
                         <div className="text-slate-500">월</div>
                         <div className="font-extrabold">
-                          ${p.promoPrice.toFixed(0)}
+                          ${fmtPrice(p.promoPrice)}
                         </div>
                       </div>
                       <div className="rounded-xl bg-slate-50 p-3">
