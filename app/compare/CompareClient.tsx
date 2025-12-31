@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import Image from "next/image"; // ✅ 이 줄 추가
 import CompareLocationBanner from "@/components/CompareLocationBanner";
 import { carriers, plans, type Plan } from "@/lib/plans";
 import { calc12moTotal } from "@/lib/recommend";
