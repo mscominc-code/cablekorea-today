@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+:root{
+  --ck-orange: 24 95% 50%;
+  --ck-navy: 221 50% 18%;
+  --ck-bg: 210 20% 98%;
+  --ck-card: 0 0% 100%;
+  --ck-text: 222 47% 11%;
+  --ck-muted: 215 16% 47%;
+}
+
+html, body { height: 100%; }
+body { background: hsl(var(--ck-bg)); color: hsl(var(--ck-text)); }
