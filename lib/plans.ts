@@ -6,6 +6,7 @@ export type Carrier = {
   id: string;
   name: string;
   brandColor: string;   // Tailwind class
+  logo: string;         // 로고 이미지 경로
   logoText: string;     // 임시 텍스트 로고
 };
 
@@ -34,18 +35,21 @@ export const carriers: Carrier[] = [
     id: "att",
     name: "AT&T",
     brandColor: "bg-sky-100 text-sky-800",
+    logo: "/logos/att.png",
     logoText: "AT&T",
   },
   {
     id: "spectrum",
     name: "Spectrum",
     brandColor: "bg-indigo-100 text-indigo-800",
+    logo: "/logos/spectrum.png",
     logoText: "Spectrum",
   },
   {
     id: "frontier",
     name: "Frontier",
     brandColor: "bg-emerald-100 text-emerald-800",
+    logo: "/logos/frontier.png",
     logoText: "Frontier",
   },
 ];
