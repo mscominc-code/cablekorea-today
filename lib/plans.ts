@@ -5,6 +5,7 @@ export type Category = "internet" | "tv" | "mobile";
 export type Carrier = {
   id: string;
   name: string;
+  nameKo: string;     // ✅ 추가
   brandColor: string;   // Tailwind class
   logo: string;         // 로고 이미지 경로
   logoText: string;     // 임시 텍스트 로고
@@ -34,6 +35,7 @@ export const carriers: Carrier[] = [
   {
     id: "att",
     name: "AT&T",
+    nameKo: "에이티앤티",
     brandColor: "bg-sky-50",
     logo: "/logos/att.png",
     logoText: "AT&T",
@@ -41,6 +43,7 @@ export const carriers: Carrier[] = [
   {
     id: "spectrum",
     name: "Spectrum",
+    nameKo: "스펙트럼",
     brandColor: "bg-indigo-50",
     logo: "/logos/spectrum.png",
     logoText: "Spectrum",
@@ -48,6 +51,7 @@ export const carriers: Carrier[] = [
   {
     id: "frontier",
     name: "Frontier",
+    nameKo: "프론티어",
     brandColor: "bg-emerald-50",
     logo: "/logos/frontier.png",
     logoText: "Frontier",

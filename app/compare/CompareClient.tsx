@@ -123,12 +123,17 @@ export default function CompareClient() {
   <Image
     src={`/logos/${carrier.id}.png`}
     alt={carrier.name}
-    width={120}      // 의미 없음 (Next/Image 요구용)
+    width={120}
     height={48}
     className="h-10 w-auto object-contain"
     priority
   />
+
+  <span className="text-lg font-extrabold text-ckNavy">
+    {carrier.nameKo}
+  </span>
 </div>
+
             <p className="mt-1 text-sm text-slate-600">
              {carrier.id === "att" && "업로드 속도가 빠른 광랜(Fiber) 중심 요금제"}
              {carrier.id === "spectrum" && "미국 전역 가용성이 높은 케이블 인터넷"}
