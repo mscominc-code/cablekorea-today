@@ -8,7 +8,7 @@ export default function Footer() {
               케이블코리아
             </div>
             <p className="mt-2 text-sm text-slate-600">
-              미국 인터넷 · 모바일을 한국어로 쉽고 투명하게
+              미국 인터넷·모바일 요금제를 한국어로 비교하고 가입할 수 있는 서비스입니다.
             </p>
           </div>
 
